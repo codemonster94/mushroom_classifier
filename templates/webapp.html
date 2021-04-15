@@ -7,6 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="static/home.css">
   <title>mushroom classification</title>
+<style>
+fieldset {
+  background-color: #00000020;
+}
+
+legend {
+
+
+  padding: 10px 10px;
+
+
+}
+
+
+</style>
 </head>
 
 
@@ -16,17 +31,21 @@
 
     <section class=" About">
 
-        <button class="btn btn-abt"><a href='/about'>ABOUT</a></button>
+        <a href='/about'><button class="btn btn-abt">ABOUT</button></a>
 
     </section>
 
     <section class="prediction">
 
           <div class="content">
-            <h1 style="color:#fefff7"><b>Mushroom classifier</b></h1>
+            <h1 style="color:#000000"><b>Mushroom classifier</b></h1>
 
-            <br>
+            <br><br>
             <form  action = "\predict" method="POST">
+                <fieldset>
+                <legend></legend>
+                    <br>
+                    <center>
 
         <label>Gill color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <select id="gill-color" name="gill-color"  required>
@@ -119,35 +138,32 @@
         <br>
 
 
-    <!-- <button id="predict_button" type="submit"> Predict </button> -->
-   <center>
+   <center><br><br>
        <a href="./"> <img src="{{url_for('static', filename='/mushroom.gif')}}"  width="40"  height="50" class="responsive"align="middle"></a>
        <br>
-<!--    <a href="./"><img src="mushroom.gif" width="40"  height="50"class="responsive" align="middle" ></a>-->
-<!--        <br>-->
-       <button id="login-button"class="button" style="vertical-align:middle"><span> Predict </span></button></center>
+
+       <button id="login-button"class="button" style="vertical-align:middle"><span>PREDICT</span></button></center>
+                <br><br>
+                    </center>
+                </fieldset>
                 <br>
-                    <h2>{{result}} </h2>
+                <h2 style="color: #110601  "><center> {{result}} </center></h2>
                 <br>
                 <a href="/"><p style="color:black"  align="middle"><b>Reset</b></p></a>
                 <br>
 
 
 
-
-
-
         </form>
 
             </div>
-<!--        <h2>{{result}} </h2>-->
+
 
 
     </section>
 
     <section class="github">
-<!--      <h1><a href="https://github.com/codemonster94"><p style="color:white">github</p></a></h1>-->
-        <button class="btn btn-git"><a href="https://github.com/codemonster94">GITHUB </a></button>
+        <a href="https://github.com/codemonster94/mushroom_classifier"><button class="btn btn-git">GITHUB</button></a>
     </section>
 
   </div>
